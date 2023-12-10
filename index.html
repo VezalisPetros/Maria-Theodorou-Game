@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spin Wheel</title>
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">Spin</div>
+        <div class="wheel">
+            <div class="words" style="--i:1;
+            --clr:#db7093;">
+                <span>Welche?</span>
+            </div>
+            <div class="words" style="--i:2;
+            --clr:#20b2aa;">
+                <span>Ja/Nein Frage</span>
+            </div>
+            <div class="words" style="--i:3;
+            --clr:#d63e92;">
+                <span>Was?</span>
+            </div>
+            <div class="words" style="--i:4;
+            --clr:#daa520;">
+                <span>Ja/Nein Frage</span>
+            </div>
+            <div class="words" style="--i:5;
+            --clr:#ff340f;">
+                <span>Wie?</span>
+            </div>
+            <div class="words" style="--i:6;
+            --clr:#ff7f50;">
+                <span>Ja/Nein Frage</span>
+            </div>
+            <div class="words" style="--i:7;
+            --clr:#3cb371;">
+                <span>Wo?</span>
+            </div>
+            <div class="words" style="--i:8;
+            --clr:#4169e1;">
+                <span>Ja/Nein Frage</span>
+            </div>
+            <div class="words" style="--i:9;
+            --clr:#dace20;">
+                <span>Wie viele?</span>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        let wheel=document.querySelector('.wheel');
+        let spinBtn=document.querySelector('.spinBtn');
+        let value = Math.ceil(Math.random()*3600);
+
+        spinBtn.onclick= function(){
+            wheel.style.transform="rotate(" + value +"deg)";
+            value = Math.ceil(Math.random()*3600);
+        }
+    </script>
+</body>
+</html>
